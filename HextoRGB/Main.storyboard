@@ -42,7 +42,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="UIButton197_TouchUpInside:" destination="BYZ-38-t0r" id="393" eventType="touchUpInside"/>
+                                    <action selector="ConvertButton_TouchUpInside:" destination="BYZ-38-t0r" id="1173" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="390" translatesAutoresizingMaskIntoConstraints="NO">
@@ -79,6 +79,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="HexValueTextField" destination="391" id="name-outlet-391"/>
+                        <outlet property="ConvertButton" destination="197" id="name-outlet-197"/>
+                        <outlet property="RedValueLabel" destination="194" id="name-outlet-194"/>
+                        <outlet property="GreenValueLabel" destination="390" id="name-outlet-390"/>
+                        <outlet property="BlueValueLabel" destination="195" id="name-outlet-195"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,5 +94,6 @@
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina55"/>
+        <simulatedOrientationMetrics key="orientation"/>
     </simulatedMetricsContainer>
 </document>

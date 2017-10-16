@@ -13,12 +13,56 @@ namespace HextoRGB
     [Register ("ViewController")]
     partial class ViewController
     {
-        [Action ("UIButton197_TouchUpInside:")]
+        [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton197_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UILabel BlueValueLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ConvertButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel GreenValueLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField HexValueTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel RedValueLabel { get; set; }
+
+        [Action ("ConvertButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ConvertButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
+            if (BlueValueLabel != null) {
+                BlueValueLabel.Dispose ();
+                BlueValueLabel = null;
+            }
+
+            if (ConvertButton != null) {
+                ConvertButton.Dispose ();
+                ConvertButton = null;
+            }
+
+            if (GreenValueLabel != null) {
+                GreenValueLabel.Dispose ();
+                GreenValueLabel = null;
+            }
+
+            if (HexValueTextField != null) {
+                HexValueTextField.Dispose ();
+                HexValueTextField = null;
+            }
+
+            if (RedValueLabel != null) {
+                RedValueLabel.Dispose ();
+                RedValueLabel = null;
+            }
         }
     }
 }
