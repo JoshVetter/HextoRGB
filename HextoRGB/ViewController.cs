@@ -6,11 +6,7 @@ namespace HextoRGB
 {
     public partial class ViewController : UIViewController
     {
-        partial void ConvertButton_TouchUpInside(UIButton sender)
-        {
-            throw new NotImplementedException();
-
-		}
+        
 
         protected ViewController(IntPtr handle) : base(handle)
         {
@@ -21,25 +17,38 @@ namespace HextoRGB
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-
-            ConvertButton.TouchUpInside += ConvertButton_TouchUpInside;
+            Newbutton.TouchUpInside+= Newbutton_TouchUpInside;
         }
-        void ConvertButton_TouchUpInside (Object sender, EventArgs e)
+
+        void Newbutton_TouchUpInside(object sender, EventArgs e)
         {
-            string hexValue = HexValueTextField.Text;
-            string redHexValue = hexValue.Substring(0, 2); 
-            string greenHexValue = hexValue.Substring(2, 2);
-            string blueHexValue = hexValue.Substring(4, 2);
+			string hexValue = HexValueTextField.Text;
+			string redHexValue = hexValue.Substring(0, 2);
+			string greenHexValue = hexValue.Substring(2, 2);
+			string blueHexValue = hexValue.Substring(4, 2);
 
-            int redValue = int.Parse(redHexValue, System.Globalization.NumberStyles.HexNumber);
-            int greenValue = int.Parse(greenHexValue, System.Globalization.NumberStyles.HexNumber);
-            int blueValue = int.Parse(blueHexValue, System.Globalization.NumberStyles.HexNumber);
+			int redValue = int.Parse(redHexValue, System.Globalization.NumberStyles.HexNumber);
+			int greenValue = int.Parse(greenHexValue, System.Globalization.NumberStyles.HexNumber);
+			int blueValue = int.Parse(blueHexValue, System.Globalization.NumberStyles.HexNumber);
 
-            RedValueLabel.Text = redValue.ToString();
-            GreenValueLabel.Text = greenValue.ToString();
-            BlueValueLabel.Text = blueValue.ToString();
+			RedValueLabel.Text = redValue.ToString();
+			GreenValueLabel.Text = greenValue.ToString();
+			BlueValueLabel.Text = blueValue.ToString();
+        }   
+     
 
-        }
+
+
+			
+        
+
+
+
+
+
+
+
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
